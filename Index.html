@@ -1,1 +1,33 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUNCAF | Archivo Digital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">F</div><div><strong>FUNCAF</strong><small>Archivo Digital</small></div></div>
+    <nav>
+      <button class="nav active" data-view="all">▦ <span>Todos los archivos</span></button>
+      <button class="nav" data-view="recent">◷ <span>Recientes</span></button>
+      <button class="nav" data-view="starred">☆ <span>Favoritos</span></button>
+    </nav>
+    <div class="side-label">ORGANIZACIÓN</div>
+    <button class="nav folder" data-folder="2026">▸ <span>2026</span></button>
+    <button class="nav folder" data-folder="2025">▸ <span>2025</span></button>
+    <button class="nav folder" data-folder="2024">▸ <span>2024</span></button>
+    <button class="nav folder" data-folder="Documentos">▸ <span>Documentos</span></button>
+    <div class="side-bottom"><div class="storage-label">Almacenamiento</div><p>La capacidad depende del servicio conectado.</p><div class="storage-track"><span></span></div><small>Conecta tu almacenamiento para ver el uso.</small></div>
+  </aside>
+  <main>
+    <header><div class="crumb">FUNCAF <span>/</span> Archivo Digital</div><div class="profile"><span class="avatar">F</span><span>Fundación</span></div></header>
+    <section class="welcome"><div><p class="eyebrow">GESTIÓN INSTITUCIONAL</p><h1>Archivo Digital</h1><p class="sub">Guarda y organiza los documentos, fotografías y videos de FUNCAF.</p></div><button id="uploadBtn" class="primary">＋ Subir archivos</button></section>
+    <section class="dropzone" id="dropzone"><div class="cloud">↑</div><h3>Arrastra tus archivos aquí</h3><p>o selecciónalos desde tu dispositivo. Se admiten archivos grandes cuando el almacenamiento está conectado.</p><button id="browseBtn" class="secondary">Seleccionar archivos</button><input id="fileInput" type="file" multiple hidden></section>
+    <section class="toolbar"><div><h2 id="sectionTitle">Todos los archivos</h2><p class="sub" id="fileCount">Tus archivos aparecerán aquí.</p></div><div class="search"><span>⌕</span><input id="searchInput" placeholder="Buscar archivos..." aria-label="Buscar archivos"></div></section>
+    <section id="queue" class="queue" hidden><h3>Selección para subir</h3><div id="queueItems"></div><div class="queue-actions"><button id="clearBtn" class="secondary">Limpiar selección</button><button id="connectBtn" class="primary">Configurar almacenamiento</button></div><p class="hint">Esta interfaz aún no está conectada a un proveedor de almacenamiento. La configuración segura se realiza en el servidor, no en este navegador.</p></section>
+    <section class="file-area"><div id="empty" class="empty"><div class="empty-icon">▱</div><h3>Tu archivo digital está listo</h3><p>Selecciona archivos para preparar tu biblioteca.</p></div><div id="fileList" class="file-list"></div></section>
+    <footer>FUNCAF · Fundación Unidos Creciendo en Amor Familiar, Inc.</footer>
+  </main>
+  <script src="app.js"></script>
+</body></html>
